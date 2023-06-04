@@ -68,13 +68,14 @@
         <form action="" method="post">
             <div class="form-content">
                 <label for="currentpwd">Current Password</label>
-                <input type="password" id="currentpwd" name="currentpwd">
+                <input type="password" id="currentpwd" name="currentpwd" required>
                 <label for="newpwd">New Password</label>
-                <input type="password" id="newpwd" name="newpwd">
+                <input type="password" id="newpwd" name="newpwd" required>
                 <label for="confirmpwd">Confirm Password</label>
-                <input type="password" id="confirmpwd" name="confirmpwd">
+                <input type="password" id="confirmpwd" name="confirmpwd" required>
             </div>
             <div class="submit-btn">
+                <input type="reset" name="reset" id="reset" value="  Clear  ">
                 <input type="submit" name="submit" id="submit" value="Change">
             </div>
             

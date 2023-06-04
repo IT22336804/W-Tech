@@ -192,6 +192,8 @@ header {
 
 /* Change password form CSS */
 .change-password-form-div{
+  display: flex;
+  flex-direction: column;
   border-style: solid;
   border-color:#b6b6b6;
   border-width: 1px;
@@ -199,19 +201,20 @@ header {
   margin-left: 60px;
   margin-right: 60px;
   margin-bottom: 50px;
+  
 }
 
 .form-header{
   font-size: 18px;
-  margin-left: 550px;
+  margin-left: 600px;
   margin-top: 20px;
   margin-bottom: 30px;
 }
 
 .form-content{
   display: grid;
-  grid-template-columns: 200px 400px;
-  margin-left: 250px;
+  grid-template-columns: 200px 300px;
+  margin-left: 325px;
   
 }
 
@@ -232,9 +235,9 @@ header {
 
 .submit-btn{
   display: flex;
-  justify-content: end;
-  margin-right: 200px;
+  margin-left: 45.5%;
   margin-bottom: px;
+
 }
 
 .submit-btn input{
@@ -244,6 +247,7 @@ header {
   border-radius: 20px;
   border-style: none;
   font-size: 16px;
+  margin-left: 20px;
 }
 
 
