@@ -220,6 +220,14 @@ header {
   border-color: #007bff;
 }
 
+.submit-reset-div input:disabled{
+  background-color:#b6b6b6;
+  color: black;
+  border: none;
+  cursor: auto;
+  
+}
+
 .terms-div label{
   font-size: 14px;
   color: rgb(90, 90 ,90 );

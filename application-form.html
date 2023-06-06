@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Profile</title>
+    <title>Apply</title>
     <link rel="stylesheet" type="text/css" href="css/application-form.css">
+    <script src="js/application-form.js"></script>
 </head>
 <body>
     <header>
@@ -25,7 +26,7 @@
 
     <div class="application-div">
         <p>Apply to <span>Job title</span></p>
-        <form action="" method="post">
+        <form method="post" action="php/submit-application.php">
             <div class="contact-info-div">
                 <p>Contact Info</p>
                 <div class="contact-info-form">
@@ -34,9 +35,9 @@
                     <label for="lname">Last Name</label>
                     <input type="text" name="lname" id="lname" required>
                     <label for="email">Email</label>
-                    <input type="email" name="email" id="email">
+                    <input type="email" name="email" id="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" placeholder="exampli@example.com">
                     <label for="mobile">Mobile</label>
-                    <input type="text" name="mobile" id="mobile">
+                    <input type="text" name="mobile" id="mobile" pattern="[0]{1}[0-9]{9}" placeholder="0123456789">
                 </div>
             </div>
 
@@ -48,11 +49,11 @@
                 <div class="resume-covlet-div">
                     <div class="resume-div">
                         <label for="resume">Upload your resume here</label>
-                        <input type="file" name="resume" id="resume" accept=".pdf">
+                        <input type="file" name="resume" id="resume" accept=".pdf" >
                     </div>
                     <div class="covlet-div">
                         <label for="resume">Upload your cover letter here</label>
-                        <input type="file" name="resume" id="resume" accept=".pdf">
+                        <input type="file" name="resume" id="resume" accept=".pdf" >
                     </div>
                     
                 </div>
@@ -65,12 +66,12 @@
                 </div>
                 <div class="terms-submit-reset-div">
                     <div class="terms-div">
-                        <input type="checkbox" name="terms" id="terms" required>
+                        <input type="checkbox" name="terms" id="terms" onchange="termsValidation()">
                         <label for="terms">I have read and agreed to the Terms and Conditions*</label>
                     </div>
                     <div class="submit-reset-div">
                         <input type="reset" name="reset" id="reset" value="Discard">
-                        <input type="submit" name="submit" id="submit" value="Submit">
+                        <input type="submit" name="submit" id="submit" value="Submit" disabled>
                     </div>
                 </div>
                 
