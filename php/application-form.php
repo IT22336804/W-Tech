@@ -1,9 +1,64 @@
+<?php
+
+    require 'config.php';
+
+    if(isset($_POST["submit"])){
+        if(!empty($_FILES["resume"]["name"] ) && !empty($_FILES["covlet"]["name"])){
+         
+            $resume_name = $_POST["fname"] . "_resume.pdf";
+            $resume_temp_name = $_FILES["resume"]["tmp_name"];
+            $resume_target_dir = "../uploads/resume/";
+            $resume_target_file = $resume_target_dir . basename($resume_name);
+
+            move_uploaded_file($resume_temp_name, $resume_target_file);
+
+            $covlet_name = $_POST["fname"] . "_cover letter.pdf";
+            $covlet_temp_name = $_FILES["covlet"]["tmp_name"];
+            $covlet_target_dir = "../uploads/covlet/";
+            $covlet_target_file = $covlet_target_dir . basename($covlet_name);
+
+            move_uploaded_file($covlet_temp_name, $covlet_target_file);
+
+            $fname = $_POST["fname"];
+            $lname = $_POST["lname"];
+            $email = $_POST["email"];
+            $mobile = $_POST["mobile"];
+            $comment = $_POST["comment"];
+    
+            $sql = "INSERT INTO application(Applicant_fname, Applicant_lname, Applicant_email, Applicant_mobile, Resume_location, Cover_letter_location, Comments) VALUES('$fname', '$lname', '$email', '$mobile', '$resume_target_file', '$covlet_target_file', '$comment')";
+    
+            if($conn->query($sql)){
+                echo '<script>alert("Successfully applied")</script>';
+            }
+            else{
+                echo "ERROR: " . $conn->error;
+            }
+    
+            $conn->close();
+
+        }
+
+        else{
+            echo '<script>alert("Please Upload your Resume and Cover letter before submitting")</script>';
+        }
+    
+
+    }
+   
+
+
+?>
+
+
+
+
+
 <!DOCTYPE html>
 <html>
 <head>
     <title>Apply</title>
-    <link rel="stylesheet" type="text/css" href="css/application-form.css">
-    <script src="js/application-form.js"></script>
+    <link rel="stylesheet" type="text/css" href="../css/application-form.css">
+    <script src="../js/application-form.js"></script>
 </head>
 <body>
     <nav>
@@ -25,7 +80,7 @@
 
     <div class="application-div">
         <p>Apply to <span>Job title</span></p>
-        <form method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
+        <form method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>" enctype="multipart/form-data">
             <div class="contact-info-div">
                 <p>Contact Info</p>
                 <div class="contact-info-form">
@@ -51,8 +106,8 @@
                         <input type="file" name="resume" id="resume" accept=".pdf" >
                     </div>
                     <div class="covlet-div">
-                        <label for="resume">Upload your cover letter here</label>
-                        <input type="file" name="resume" id="resume" accept=".pdf" >
+                        <label for="covlet">Upload your cover letter here</label>
+                        <input type="file" name="covlet" id="covlet" accept=".pdf" >
                     </div>
                     
                 </div>
@@ -61,7 +116,7 @@
 
             <div class="form-final-div">
                 <div class="comments-div">
-                    <textarea rows="8" cols="124" placeholder="Additional comments"></textarea>
+                    <textarea name="comment" rows="8" cols="124" placeholder="Additional comments"></textarea>
                 </div>
                 <div class="terms-submit-reset-div">
                     <div class="terms-div">
@@ -114,3 +169,4 @@
     
 </body>
 </html>
+
