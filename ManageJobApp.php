@@ -1,12 +1,13 @@
 
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <title>HR_Dashboard</title>
-    <!-- <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet"> -->
-    <link rel="stylesheet" href="css\ManageJobApp.css">
+    <title>Manage Jobs</title>
+    
+    <link rel="stylesheet" href="css\Manage jobs.css">
 </head>
 <body>
     <div class="grid-container">
@@ -25,6 +26,7 @@
             </div>
         </header>
 
+        <!-- SIDEBAR -->
         <aside id="sidebar">
             <div class="sidebar-title">
                 <div class="sidebar-brand">
@@ -34,15 +36,13 @@
             </div>
 
             <ul class="sidebar-list">
-               
-            <ul class="sidebar-list">
                 <li class="sidebar-list-item">
                     <img class="material-icons-outlined" src="images/overview_FILL0_wght400_GRAD0_opsz48.png" alt="overview icon">
                     <a href="HR_Dashboard.php" class="icon-name">Dashboard</a>
                 </li>
                 <li class="sidebar-list-item">
                     <img class="material-icons-outlined" src="images/groups_FILL0_wght400_GRAD0_opsz48.png" alt="candidates icon">
-                    <a class="icon-name">Manage Applicants</a>
+                    <b class="icon-name">Manage Applicants</b>
                 </li>
                 <li class="sidebar-list-item">
                     <img class="material-icons-outlined" src="images/edit_calendar_FILL0_wght400_GRAD0_opsz48.png" alt="schedule icon">
@@ -57,8 +57,33 @@
                 
             </ul>
         </aside>
-    </div>
-    
+       
+
+        <table>
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Mobile</th>
+                <th>Resume</th>
+                <th>Cover Letter</th>
+                <th>Comments</th>
+                <th>Status</th>
+                <th >Delete</th>
+            </tr>
+            <?php
+                include 'php\JobAppTable.php'
+            ?>
+        </table>
+
+        <script>
+    function confirmAction(Application_ID, action) {
+        var confirmed = confirm("Are you sure you want to " + action + " this application?");
+        if (confirmed) {
+            window.location.href = "ManageJobApp.php?action=" + action + "&id=" + Application_ID;
+        }
+    }
+
+</script>
 </body>
 
 
