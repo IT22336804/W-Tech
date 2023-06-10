@@ -1,6 +1,6 @@
 <?php
 
-    require 'config.php';
+    require 'configK.php';
 
     if(isset($_POST["submit"])){
         if(!empty($_FILES["resume"]["name"] ) && !empty($_FILES["covlet"]["name"])){

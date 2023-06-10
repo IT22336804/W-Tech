@@ -4,7 +4,7 @@
     
     $uname = "Krash612";
 
-    require 'config.php';
+    require 'configK.php';
 
     $sql = "SELECT First_Name, Last_Name, Email, Mobile, Bio, Username, Password FROM user WHERE Email = '$user'";
     $result = $conn->query($sql);
@@ -156,6 +156,7 @@
             
         </form>
     </div>
+    <div class="remove-btn-div"><a href="delete-account.php"><button class="remove-btn" href="delete-account.php">Remove account</button></a></div>
 
     <footer>
         <div class="footer-top">

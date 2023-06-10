@@ -2,7 +2,7 @@
     session_start();
     echo $loggedUser = $_SESSION["loggedUser"];
 
-    require "config.php";
+    require "configK.php";
 
     if(isset($_POST["submit"])){
 

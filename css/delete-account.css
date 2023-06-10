@@ -1,0 +1,40 @@
+.form-div{
+    display: flex;
+    justify-content: center;
+}
+
+.form-content{
+    border-style: solid;
+    border-width: 1px;
+    border-color: #b6b6b6;
+    padding: 15px 30px 50px 30px;
+}
+
+.form-header{
+    text-align: center;
+}
+
+.pwd-input{
+    font-size: 17px;
+    margin-left: 36px;
+    
+}
+
+.submit-btn{
+    display: block;
+    margin-top: 30px;
+    margin-left: 130px;
+    padding: 8px 16px;
+    background-color: #0F4C75;
+    color: #fff;
+    border-radius: 20px;
+    border-style: solid;
+    border-color: #0F4C75;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.submit-btn:hover{
+    background-color: #fff;
+    color: #0F4C75;
+}
