@@ -86,14 +86,63 @@ nav {
 
 
 /* User overview CSS */
+
+.edit-uname-form-div{
+  position: absolute;
+  top: 151px;
+  left: 1047px;
+}
+
+.edit-fname-form-div{
+  position: absolute;
+  top: 235px;
+  left: 1047px;
+}
+
+.edit-lname-form-div{
+  position: absolute;
+  top: 321px;
+  left: 1047px;
+}
+
+.edit-email-form-div{
+  position: absolute;
+  top: 405px;
+  left: 1047px;
+}
+
+.edit-mobile-form-div{
+  position: absolute;
+  top: 491px;
+  left: 1047px;
+}
+
+.edit-bio-form-div{
+  position: absolute;
+  top: 254px;
+  left: 12px;
+}
+
+.user-profile-div input{
+  font-size: 17px;
+  width: 240px;
+}
+
+.edit-form{
+  display: none;
+}
+
 .user-profile-div{
+  position: relative;
   display: flex;
-  margin-top: 30px;
+  margin-top: 50px;
   margin-bottom: 30px;
   flex-direction: row;
   margin-left: 60px;
   margin-right: 60px;
 }
+
+
 
 .user-overview{
   border-style: solid;
@@ -128,6 +177,10 @@ nav {
 
 .user-bio-div{
   margin-bottom: 20px;
+  padding-bottom: 50px;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  border-bottom-color: #b6b6b6;
 }
 
 .bio-header,
@@ -142,6 +195,7 @@ nav {
   padding-left: 15px;
   padding-right: 8px;
   font-size: 12px;
+  width: 277px;
 }
 
 .skillset-div{
@@ -178,12 +232,51 @@ nav {
   
 }
 
+
 .user-details-header{
   margin-left: 60px;
+  margin-right: 496px;
   margin-top: 40px;
   margin-bottom: 60px;
   font-size: 28px;
   font-weight: bold;
+  display: inline-block;
+}
+
+#submit{
+  padding: 8px 16px;
+  background-color: #0F4C75;
+  color: #fff;
+  border-radius: 20px;
+  border-style: solid;
+  border-color: #0F4C75;
+  font-size: 16px;
+  cursor: pointer;
+  width: 80px;
+  display: none;
+}
+
+.edit-profile-btn{
+  padding: 8px 16px;
+  background-color: #0F4C75;
+  color: #fff;
+  border-radius: 20px;
+  border-style: solid;
+  border-color: #0F4C75;
+  font-size: 16px;
+  margin-left: 1298px;
+  cursor: pointer;
+  width: 111px;
+  margin-top: 150px;
+  position: absolute;
+  z-index: 99;
+}
+
+.edit-profile-btn:hover, 
+#submit:hover{
+  background-color: #fff;
+  color: #0F4C75;
+
 }
 
 .details{
@@ -193,7 +286,7 @@ nav {
 
 .details div{
   display: grid;
-  grid-template-columns: 1fr 20px 300px;
+  grid-template-columns: 1fr 300px;
   column-gap: 40px;
   margin-bottom: 30px;
   font-size: 17px;
@@ -234,36 +327,44 @@ nav {
   
 }
 
-.form-content label, input{
+.form-content .label, .input{
   margin-bottom: 30px;
 }
 
-.form-content input{
+.form-content .input{
   padding: 5px 10px 5px 10px;
   font-size: 14px;
   
 }
 
-.form-content label{
+.form-content .label{
   font-size: 16px;
   margin-top: 5px;
 }
 
 .submit-btn{
   display: flex;
-  margin-left: 45.5%;
+  margin-left: 40.5%;
   margin-bottom: px;
 
 }
 
-.submit-btn input{
+.submit-btn .input{
   padding: 8px 16px;
-  background-color: #007bff;
+  background-color: #0F4C75;
   color: #fff;
   border-radius: 20px;
-  border-style: none;
+  border-style: solid;
+  border-color: #0F4C75;
   font-size: 16px;
   margin-left: 20px;
+  cursor: pointer;
+}
+
+.submit-btn .input:hover{
+  background-color: #fff;
+  color: #0F4C75;
+
 }
 
 
