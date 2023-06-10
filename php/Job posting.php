@@ -26,7 +26,7 @@ if ($result->num_rows > 0) {
         echo '<div class="job-description" id="job-description' . $i . '" style="display: none;">';
         echo '  <div class="topic-job">';
         echo '    <h1 class="job-title" data-jobid="' . $row['job_title'] . '">' . $row['job_title'] . '</h1>';
-        echo '    <button class="apply">Apply</button>';
+        echo '   <a href="php\loginUser.php"> <button class="apply">Apply</button></a>';
         echo '  </div>';
         echo '  <hr style="border-color: black; width: 100%;">';
         echo '  <div class="details">';
