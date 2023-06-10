@@ -76,14 +76,64 @@
         </table>
 
         <script>
-    function confirmAction(Application_ID, action) {
-        var confirmed = confirm("Are you sure you want to " + action + " this application?");
-        if (confirmed) {
-            window.location.href = "ManageJobApp.php?action=" + action + "&id=" + Application_ID;
+    function updateStatus(action, id) {
+        var status;
+        if (action === 'accept') {
+            status = 'Accepted';
+        } else if (action === 'reject') {
+            status = 'Rejected';
+        } else if (action === 'waitlist') {
+            status = 'Waitlisted';
+        } else if (action === 'delete') {
+            if (confirm('Are you sure you want to delete this application?')) {
+                var form = document.createElement('form');
+                form.method = 'post';
+                form.action = '<?php echo $_SERVER["PHP_SELF"]; ?>';
+
+                var inputId = document.createElement('input');
+                inputId.type = 'hidden';
+                inputId.name = 'Application_ID';
+                inputId.value = id;
+
+                var inputAction = document.createElement('input');
+                inputAction.type = 'hidden';
+                inputAction.name = 'action';
+                inputAction.value = action;
+
+                form.appendChild(inputId);
+                form.appendChild(inputAction);
+                document.body.appendChild(form);
+
+                form.submit();
+            }
+        } else {
+            return;
+        }
+
+        if (status) {
+            var form = document.createElement('form');
+            form.method = 'post';
+            form.action = '<?php echo $_SERVER["PHP_SELF"]; ?>';
+
+            var inputId = document.createElement('input');
+            inputId.type = 'hidden';
+            inputId.name = 'Application_ID';
+            inputId.value = id;
+
+            var inputAction = document.createElement('input');
+            inputAction.type = 'hidden';
+            inputAction.name = 'action';
+            inputAction.value = action;
+
+            form.appendChild(inputId);
+            form.appendChild(inputAction);
+            document.body.appendChild(form);
+
+            form.submit();
         }
     }
-
 </script>
+
 </body>
 
 
