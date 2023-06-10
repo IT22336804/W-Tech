@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Add Job</title>
+    
+    <link rel="stylesheet" href="css\Add jobs.css">
+</head>
+<body>
+    <div class="grid-container">
+        <header class="header">
+            <div class="menu-icon" onclick="openSidebar()">
+                <img class="material-icons-outlined" src="images/menu_FILL0_wght400_GRAD0_opsz48.png" alt="menu icon">
+            </div>
+
+            <div class="header-left">
+                <img class="material-icons-outlined" src="images/search_FILL0_wght400_GRAD0_opsz48.png" alt="search icon">
+            </div>
+
+            <div class="header-right">
+                <img class="material-icons-outlined" src="images/notifications_FILL0_wght400_GRAD0_opsz48.png" alt="notification icon">
+                <img class="material-icons-outlined" src="images/account_circle_FILL0_wght400_GRAD0_opsz48.png" alt="profile icon">
+            </div>
+        </header>
+
+        <!-- SIDEBAR -->
+        <aside id="sidebar">
+            <div class="sidebar-title">
+                <div class="sidebar-brand">
+                    <img class="logo-icon" src="images\W - Tech.png" alt="logo icon" width="75%">
+                </div>
+                <img class="material-icons-outlined" src="images/close_FILL0_wght400_GRAD0_opsz48.png" alt="close icon" onclick="closeSidebar()">
+            </div>
+
+            <ul class="sidebar-list">
+                <li class="sidebar-list-item">
+                    <img class="material-icons-outlined" src="images/overview_FILL0_wght400_GRAD0_opsz48.png" alt="overview icon">
+                    <a href="HR_Dashboard.php"  class="icon-name">Dashboard</a>
+                </li>
+                <li class="sidebar-list-item">
+                    <img class="material-icons-outlined" src="images/groups_FILL0_wght400_GRAD0_opsz48.png" alt="candidates icon">
+                    <b class="icon-name">Manage Applicants</b>
+                </li>
+                <li class="sidebar-list-item">
+                    <img class="material-icons-outlined" src="images/edit_calendar_FILL0_wght400_GRAD0_opsz48.png" alt="schedule icon">
+                    <a href="addjob.html" class="icon-name" style="text-decoration: none; color: white;">Add Jobs</a>
+
+                </li>
+                <li class="sidebar-list-item">
+                    <img class="material-icons-outlined" src="images/settings_FILL0_wght400_GRAD0_opsz48.png" alt="settings icon">
+                    <a href="Manage Jobs.php" class="icon-name" style="text-decoration: none; color: white;">Manage Jobs</a>
+
+                </li> 
+                
+            </ul>
+        </aside>
+        <main class="main-container">
+                <div class="main-title">
+                    <p class="font-weight-bold">Add Job</p>
+                </div>
+
+    
+                <form action="php\Job Insert.php" method="post">
+                    <div>
+                      <label for="category">Category:</label>
+                      <select id="category" name="category">
+                        <option value="software-developer">Software Developer</option>
+                        <option value="data-analyst">Data Analyst</option>
+                        <option value="ux-ui-designer">UX/UI Designer</option>
+                        <option value="project-manager">Project Manager</option>
+                        <option value="quality-assurance">Quality Assurance</option>
+                        <option value="it-consultant">IT Consultant</option>
+                        <option value="cybersecurity">Cyber Security</option>
+                      </select>
+                    </div>
+                    
+                      <div>
+                        <label for="type">Type</label>
+                        <select id="type" name="type">
+                          <option value="online">Online</option>
+                          <option value="hybrid">Hybrid</option>
+                          <option value="physical">Physical</option>
+                          
+                        </select>
+                      </div>
+                    <div>
+                      <label for="job_title">Job Title:</label>
+                      <input type="text" id="job_title" name="job_title" required>
+                    </div>
+                    <div>
+                      <label for="salary_amount">Salary:</label>
+                      <input type="text" id="salary_amount" name="salary_amount" required>
+                    </div>
+                    <div>
+                      <label for="short-description">Short Description:</label>
+                      <textarea id="short-description" name="short-description" required></textarea>
+                    </div>
+            
+                    <div>
+                      <label for="full-description">Full Description</label>
+                      <textarea name="full-description" id="full-description" required></textarea>
+                    </div>
+                    <div>
+                      <label for="responsibilities">Responsibilities</label>
+                      <textarea name="responsibilities" id="responsibilities" required></textarea>
+                    </div>
+                    <div>
+                      <label for="requirements">Requirements</label>
+                      <textarea name="requirements" id="requirements" required></textarea>
+                    </div>
+                    <div class="submit-button">
+                      <input type="submit" value="Submit">
+                    </div>
+                    
+                  </form>
+                  
+
+
+        </main>
+
+   
+    
+</body>
+
+
+</html>
