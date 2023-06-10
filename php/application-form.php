@@ -25,7 +25,7 @@
             $mobile = $_POST["mobile"];
             $comment = $_POST["comment"];
     
-            $sql = "INSERT INTO application(Applicant_fname, Applicant_lname, Applicant_email, Applicant_mobile, Resume_location, Cover_letter_location, Comments) VALUES('$fname', '$lname', '$email', '$mobile', '$resume_target_file', '$covlet_target_file', '$comment')";
+            $sql = "INSERT INTO application(Applicant_fname, Applicant_lname, Applicant_email, Applicant_mobile, Resume_location, Cover_letter_location, Comments, status) VALUES('$fname', '$lname', '$email', '$mobile', '$resume_target_file', '$covlet_target_file', '$comment', 'Pending')";
     
             if($conn->query($sql)){
                 echo '<script>alert("Successfully applied")</script>';

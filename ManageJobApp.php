@@ -61,69 +61,29 @@
 
         <table>
             <tr>
-                <th>JOB ID</th>
-                <th>Category</th>
-                <th>Job Title</th>
-                <th>Short Description</th>
-                <th>Salary</th>
-                <th>Full Description</th>
-                <th>Responsibilities</th>
-                <th>Requirements</th>
-                <th >Edit</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Mobile</th>
+                <th>Resume</th>
+                <th>Cover Letter</th>
+                <th>Comments</th>
+                <th>Status</th>
                 <th >Delete</th>
             </tr>
             <?php
-                include 'php\Jobs table.php'
+                include 'php\JobAppTable.php'
             ?>
         </table>
 
         <script>
-    function editJob(jobId) {
-        // Redirect to the edit page with the job ID as a parameter
-        window.location.href = "edit job.php?id=" + jobId;
-    }
-
-
-
-
-    function deleteJob(jobId) {
-        // Show the confirmation dialog
-        var confirmDelete = confirm("Are you sure you want to delete this job?");
-
-        // If the user confirms the deletion
-        if (confirmDelete) {
-            // Create a new XMLHttpRequest object
-            var xhr = new XMLHttpRequest();
-
-            // Set up the request
-            xhr.open("POST", "php/delete_job.php", true);
-            xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-
-            // Set up the callback function
-            xhr.onreadystatechange = function() {
-                if (xhr.readyState === 4 && xhr.status === 200) {
-                    // Handle the response from the server
-                    if (xhr.responseText === "success") {
-                        // Delete successful
-                        alert("Job deleted successfully.");
-                        window.location.reload();
-                    } else {
-                        // Delete failed
-                        alert("Failed to delete the job.");
-                    }
-                } else if (xhr.readyState === 4 && xhr.status !== 200) {
-                    // Handle errors if any
-                    alert("Error: " + xhr.status);
-                }
-            };
-
-            // Send the request with the job ID as data
-            xhr.send("id=" + jobId);
+    function confirmAction(Application_ID, action) {
+        var confirmed = confirm("Are you sure you want to " + action + " this application?");
+        if (confirmed) {
+            window.location.href = "ManageJobApp.php?action=" + action + "&id=" + Application_ID;
         }
     }
-</script>
 
-    
+</script>
 </body>
 
 
