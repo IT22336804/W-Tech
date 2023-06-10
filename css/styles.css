@@ -1,0 +1,273 @@
+.container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+  }
+  
+  .card {
+	width: 400px;
+	padding: 20px;
+	background-color: #ffffff;
+	border-radius: 5px;
+	border-radius: 10px;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+    -o-transition: 0.3s;
+  }
+  
+  h2 {
+	text-align: center;
+  }
+  
+  form {
+	display: flex;
+	flex-direction: column;
+  }
+  
+  input, textarea {
+	margin-bottom: 10px;
+	padding: 8px;
+	border: 1px solid #ccc;
+	border-radius: 3px;
+  }
+  
+  button {
+	padding: 10px;
+	background-color: #007bff;
+	color: #fff;
+	border: none;
+	border-radius: 3px;
+	cursor: pointer;
+  }
+  
+  a {
+	text-decoration: none;
+  }
+  
+  .column {
+	display: flex;
+	flex-direction: column;
+  }
+  
+  p {
+	text-align: center;
+  }
+
+ body {
+	background-image: url("../images/Hire.jpg");
+	background-size: cover;
+	background-position: top center;
+	background-repeat: no-repeat;
+	background-size: 100%;
+	background-position-y: 55px;
+  }
+  * {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+  
+	font-family: "Montserrat", sans-serif;
+  }
+  .container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+  }
+  
+  .card {
+	width: 400px;
+	padding: 20px;
+	text-align: center;
+	background-color: #fff;
+	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  .card h2 {
+	margin-bottom: 20px;
+  }
+  
+  .card form {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+  }
+  
+  .card input {
+	width: 100%;
+	padding: 10px;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+  }
+  
+  .card label {
+	display: flex;
+	align-items: center;
+  }
+  
+  .submit{
+	padding: 10px 20px;
+	background-color: #4CAF50;
+	color: #fff;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+  }
+  
+  .card button:hover {
+	background-color: #45a049;
+  }
+  
+  .card a {
+	color: blue;
+	text-decoration: none;
+  }
+  html, body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+footer {
+    background-color: #f0f0f0;
+    padding: 20px;
+    text-align: center;
+    margin-top: auto;
+    margin-left: -20px;
+    margin-right: -20px;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    background-image: linear-gradient(lightblue  , white );
+
+}
+
+.footer-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+
+.footer-section {
+    flex: 1;
+}
+
+.footer-line {
+    border: none;
+    border-top: 1px solid #ccc;
+    margin: 20px 0;
+}
+
+.footer-section h3 {
+    margin-bottom: 10px;
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.social-media-links img {
+    width: 20px;
+    height: 20px;
+    margin: 0 5px;
+}
+
+.footer-buttons a {
+    margin: 0 5px;
+}
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    width: 100%;
+	background-image: linear-gradient(#000000,#0F4C75);
+    
+  }
+  
+  .logo {
+    margin-left: 10px;
+  }
+  
+  .logo img {
+    height: 50px;
+  }
+  
+  
+  
+  .menu {
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+  
+  }
+  .menu-item{
+   margin-left: 50px;
+   margin-right: 10px;
+   text-decoration: none;
+   color: rgb(0, 55, 236);
+  }
+  .menu-item a{
+    position: relative;
+  }
+  .menu:hover{
+    cursor: pointer;
+  }
+
+  .menu-item::after
+  {
+    content: '';
+    width: 100%;
+    height: 2px;
+    background: #BBE1FA;
+    display: block;
+    margin: auto;
+    transform: scaleX(0);
+    transition: 0.5s;
+  }
+
+  .menu-item:hover::after
+  {
+    transform: scaleX(1);
+  }
+
+  
+  .signup-login {
+    display: flex;
+    align-items: center;
+  }
+  
+  .login-button, .signup-button {
+    padding: 8px 16px;
+    background-color: #0F4C75;
+    color: #fff;
+    border-radius: 20px;
+    text-decoration: none;
+    margin-right: 5px;
+    display: flex;
+    border:#007bff;
+    border-style: solid;
+    border-width: 1px;
+  }
+  .login-button:hover,.signup-button:hover{
+    background-color: #fff;
+    color: #1B262C;
+  
+  }
+  .signup-login-divider {
+    width: 1px;
+    height: 100%;
+    background-color: #fff;
+    margin: 0 5px;
+  }
+
+  /*ForgotPass */
