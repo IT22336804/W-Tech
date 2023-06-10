@@ -47,14 +47,14 @@ if(isset($_POST["submit"])){
             </div>
             
                 <div class="menu">
-                    <a class="menu-item" href="#">Home</a>
-                    <a class="menu-item" href="#">Find Jobs</a>
-                    <a class="menu-item" href="#">About Us</a>
+                    <a class="menu-item" href="../index1.html">Home</a>
+                    <a class="menu-item" href="../Find_jobs.php">Find Jobs</a>
+                    <a class="menu-item" href="../About_US.html">About Us</a>
                 </div>
             
             <div class="signup-login">
-                <a class="login-button" href="#">Login</a>
-                <a class="signup-button" href="#">Signup</a>
+                <a class="login-button" href="loginUser.php">Login</a>
+                <a class="signup-button" href="SignUp.php">Signup</a>
             </div>
         </nav>
         
