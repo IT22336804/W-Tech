@@ -28,7 +28,7 @@ if ($result->num_rows > 0) {
         
         echo '<div class="box" id="box' . $i . '" data-category="' . $row['category'] . '">';
         echo '<h2>'.$row['job_title'].'</h2>';
-        echo '<p class="est-sal"><img src="images\dollar.png" >'.$row['salary_amount'].'</p>';
+        echo '<p class="est-sal"><img src="../images/dollar.png" >'.$row['salary_amount'].'</p>';
         echo '<p>'.$row['short_description'].'</p>';
         echo '</div>';
         

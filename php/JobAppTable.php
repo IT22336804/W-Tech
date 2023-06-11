@@ -57,15 +57,15 @@ if ($result->num_rows > 0) {
         echo '<td>' . $row['Comments'] . '</td>';
         echo '<td>' . $row['status'] . '</td>';
         echo '<td>';
-        echo '<button onclick="updateStatus(\'accept\', ' . $row['Application_ID'] . ')">Accept</button>';
-        echo '<button onclick="updateStatus(\'reject\', ' . $row['Application_ID'] . ')">Reject</button>';
-        echo '<button onclick="updateStatus(\'waitlist\', ' . $row['Application_ID'] . ')">Waitlist</button>';
-        echo '<button onclick="updateStatus(\'delete\', ' . $row['Application_ID'] . ')">Delete</button>';
+        echo '<button class="table-btn" onclick="updateStatus(\'accept\', ' . $row['Application_ID'] . ')">Accept</button>';
+        echo '<button class="table-btn" onclick="updateStatus(\'reject\', ' . $row['Application_ID'] . ')">Reject</button>';
+        echo '<button class="table-btn" onclick="updateStatus(\'waitlist\', ' . $row['Application_ID'] . ')">Waitlist</button>';
+        echo '<button class="table-btn" onclick="updateStatus(\'delete\', ' . $row['Application_ID'] . ')">Delete</button>';
         echo '</td>';
         echo '</tr>';
     }
 
-    echo '</table>';
+    
 } else {
     echo '<p>No job applications found.</p>';
 }

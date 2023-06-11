@@ -42,7 +42,7 @@
                 </li>
                 <li class="sidebar-list-item">
                     <img class="material-icons-outlined" src="images/groups_FILL0_wght400_GRAD0_opsz48.png" alt="candidates icon">
-                    <b class="icon-name">Manage Applicants</b>
+                    <a class="icon-name" href="ManageJobApp.php">Manage Applications</a>
                 </li>
                 <li class="sidebar-list-item">
                     <img class="material-icons-outlined" src="images/edit_calendar_FILL0_wght400_GRAD0_opsz48.png" alt="schedule icon">

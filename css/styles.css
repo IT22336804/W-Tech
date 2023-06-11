@@ -1,3 +1,8 @@
+*{
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight:550;
+}
+
 .container {
 	display: flex;
 	justify-content: center;
@@ -66,7 +71,7 @@
 	padding: 0;
 	box-sizing: border-box;
   
-	font-family: "Montserrat", sans-serif;
+
   }
   .container {
 	display: flex;
