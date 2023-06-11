@@ -8,6 +8,7 @@ function editProfile(){
     let email = document.getElementById("email");
     let mobile = document.getElementById("mobile");
     let bio = document.getElementById("bio");
+    let pic = document.getElementById("profile-pic");
     let submitBtn = document.getElementById("submit");
 
     if(uname.style.display === "none"){
@@ -18,6 +19,7 @@ function editProfile(){
         email.style.display = "block";
         mobile.style.display = "block";
         bio.style.display = "block";
+        pic.style.display = "block";
         submitBtn.style.display = "inline-block";
 
     }
@@ -29,6 +31,7 @@ function editProfile(){
         email.style.display = "none";
         mobile.style.display = "none";
         bio.style.display = "none";
+        pic.style.display = "none";
         submitBtn.style.display = "none";
     }
     

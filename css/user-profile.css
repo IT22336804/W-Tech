@@ -58,6 +58,17 @@ nav {
   align-items: center;
 }
 
+.signup-login img{
+  width: 48px;
+  border-radius: 24px;
+}
+
+.username{
+  text-decoration: none;
+  color: black;
+  margin-right: 20px;
+}
+
 .login-button, .signup-button {
   padding: 8px 16px;
   background-color: #0F4C75;
@@ -119,8 +130,14 @@ nav {
 
 .edit-bio-form-div{
   position: absolute;
-  top: 254px;
+  top: 356px;
   left: 12px;
+}
+
+.edit-pic-form-div{
+  position: absolute;
+  top: 266px;
+  left: 44px;
 }
 
 .user-profile-div input{
@@ -140,6 +157,7 @@ nav {
   flex-direction: row;
   margin-left: 60px;
   margin-right: 60px;
+  
 }
 
 
@@ -171,7 +189,13 @@ nav {
   border-bottom-width: 1px;
   border-bottom-style: solid;
   border-bottom-color: #b6b6b6;
-  
+  padding-bottom: 57px;
+  padding-top: 45px;
+}
+
+.profile-pic-div img{
+  width: 200px;
+  border-radius: 100px;
 }
 
 

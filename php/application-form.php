@@ -1,4 +1,5 @@
 <?php
+session_start();
 
     require 'configK.php';
 
@@ -67,14 +68,14 @@
         </div>
                 
         <div class="menu">
-            <a class="menu-item" href="#">Home</a>
-            <a class="menu-item" href="#">Find Jobs</a>
-            <a class="menu-item" href="#">About Us</a>
+            <a class="menu-item" href="logged-index.php">Home</a>
+            <a class="menu-item" href="logged-Find-jobs.php">Find Jobs</a>
+            <a class="menu-item" href="logged-About-us.php">About Us</a>
         </div>
                 
         <div class="signup-login">
-            <a class="login-button" href="#">Login</a>
-            <a class="signup-button" href="#">Signup</a>
+            <a href="user-profile.php" class="username"><?php echo $_SESSION["username"]; ?></a>
+            <a href="user-profile.php"><img src="<?php echo $_SESSION["pic"]; ?>"></a>
         </div>
     </nav>
 

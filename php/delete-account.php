@@ -15,7 +15,7 @@
             $sql2 = "DELETE FROM user WHERE Email = '$loggedUser'";
             if($conn->query($sql2)){
                 
-                header("location: ../index.html");
+                header("location: ../index1.html");
             }
             else{
                 echo "<script>alert('Cannot Remove User')</script>";

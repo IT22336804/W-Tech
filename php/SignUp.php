@@ -2,13 +2,14 @@
 require "configR.php" ;
 
 if(isset($_POST["submit"])){
-  $Fname=$_POST["First_Name"];
-  $Lname=$_POST["Last_Name"];
-  $dob=$_POST["Date_of_Birth"];
-  $email=$_POST["Email"];
-  $bio=$_POST["bio"];
-  $usern=$_POST["Username"];
-  $pass=$_POST["Password"];
+  $Fname = $_POST["First_Name"];
+  $Lname = $_POST["Last_Name"];
+  $dob = $_POST["Date_of_Birth"];
+  $email = $_POST["Email"];
+  $mobile = $_POST["Mobile"];
+  $bio = $_POST["bio"];
+  $usern = $_POST["Username"];
+  $pass = $_POST["Password"];
 
   $sql= "INSERT INTO user(First_Name, Last_Name, Date_of_Birth, Email, Bio, Username, Password) VALUES('$Fname', '$Lname', '$dob', '$email', '$bio;', '$usern', '$pass') " ;
   if($conn->query($sql)){
@@ -67,6 +68,7 @@ if(isset($_POST["submit"])){
         <input type="text" placeholder="First Name" name="First_Name" required>
         <input type="text" placeholder="Last Name" name="Last_Name" required>
         <input type="email" placeholder="Email" name="Email" required>
+        <input type="text" placeholder="Mobile" name="Mobile" required>
         <input type="date" placeholder="Date of Birth" name="Date_of_Birth" required>
         <textarea placeholder="Bio" rows="4" name="bio"></textarea>
       </div>

@@ -6,7 +6,7 @@
 
     require 'configK.php';
 
-    $sql = "SELECT First_Name, Last_Name, Email, Mobile, Bio, Username, Password FROM user WHERE Email = '$user'";
+    $sql = "SELECT First_Name, Last_Name, Email, Mobile, Bio, Username, Password, Profile_pic_location FROM user WHERE Email = '$user'";
     $result = $conn->query($sql);
 
     if($result->num_rows > 0){
@@ -46,7 +46,7 @@
         }
     }
     
-
+    $conn->close();
 ?>
 
 
@@ -67,20 +67,20 @@
         </div>
                 
         <div class="menu">
-            <a class="menu-item" href="#">Home</a>
-            <a class="menu-item" href="#">Find Jobs</a>
-            <a class="menu-item" href="#">About Us</a>
+            <a class="menu-item" href="logged-index.php">Home</a>
+            <a class="menu-item" href="logged-Find-jobs.php">Find Jobs</a>
+            <a class="menu-item" href="logged-About-us.php">About Us</a>
         </div>
                 
         <div class="signup-login">
-            <a class="login-button" href="#">Login</a>
-            <a class="signup-button" href="#">Signup</a>
+            <a href="user-profile.php" class="username"><?php echo $_SESSION["username"]; ?></a>
+            <a href="user-profile.php"><img src="<?php echo $_SESSION["pic"]; ?>"></a>
         </div>
     </nav>
 
     <button class="edit-profile-btn" onclick="editProfile()">Edit Profile</button>
 
-    <form method="post" action="edit-profile.php">
+    <form method="post" action="edit-profile.php" enctype="multipart/form-data">
         <div class="user-profile-div">
             <div class="edit-uname-form-div">
                 <input type="text" name="uname" class="edit-form" id="uname" value="<?php echo $row["Username"]; ?>">
@@ -105,11 +105,14 @@
             <div class="edit-bio-form-div">
                 <textarea cols="33" rows="4" name="bio" class="edit-form" id="bio"><?php echo $row["Bio"]; ?></textarea>
             </div>
+            <div class="edit-pic-form-div">
+                <input type="file" name="profile-pic" class="edit-form" id="profile-pic">
+            </div>
             
             <div class="user-overview">
             
                 <div class="profile-pic-div">
-                    <img src="../images/default-avatar-profile-icon-of-social-media-user-vector.jpg" alt="Profile picture">
+                    <img src="<?php echo $row["Profile_pic_location"]; ?>" alt="Profile picture">
                 </div>
                 <div class="user-bio-div">
                     <p class="bio-header">Bio</p>
@@ -156,7 +159,8 @@
             
         </form>
     </div>
-    <div class="remove-btn-div"><a href="delete-account.php"><button class="remove-btn" href="delete-account.php">Remove account</button></a></div>
+    <div class="remove-btn-div"><a href="delete-account.php"><button class="remove-btn" >Remove account</button></a></div>
+    <div class="logout-btn-div"><a href="../index1.html"><button class="logout-btn" >Sign out</button></a></div>
 
     <footer>
         <div class="footer-top">
