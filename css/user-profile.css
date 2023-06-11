@@ -1,10 +1,15 @@
+*{
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight:550;
+}
+
 /* Header CSS */
 nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 10px;
- 
+  background-image: linear-gradient(#1B262C,#0F4C75);
   
 }
 
@@ -28,7 +33,7 @@ nav {
  margin-left: 50px;
  margin-right: 10px;
  text-decoration: none;
- color: black;
+ color: #fff;
 }
 .menu-item a{
   position: relative;
@@ -56,6 +61,17 @@ nav {
 .signup-login {
   display: flex;
   align-items: center;
+}
+
+.signup-login img{
+  width: 48px;
+  border-radius: 24px;
+}
+
+.username{
+  text-decoration: none;
+  color: #fff;
+  margin-right: 20px;
 }
 
 .login-button, .signup-button {
@@ -119,8 +135,14 @@ nav {
 
 .edit-bio-form-div{
   position: absolute;
-  top: 254px;
+  top: 356px;
   left: 12px;
+}
+
+.edit-pic-form-div{
+  position: absolute;
+  top: 266px;
+  left: 44px;
 }
 
 .user-profile-div input{
@@ -140,17 +162,18 @@ nav {
   flex-direction: row;
   margin-left: 60px;
   margin-right: 60px;
+  
 }
 
 
 
 .user-overview{
   border-style: solid;
-  border-color: #b6b6b6;
-  border-width: 1px;
+  border-color: black;
+  border-width: 4px;
   border-radius: 15px;
   width: 300px;
-  
+  background-color: whitesmoke;
 }
 
 .user-name-div{
@@ -171,7 +194,13 @@ nav {
   border-bottom-width: 1px;
   border-bottom-style: solid;
   border-bottom-color: #b6b6b6;
-  
+  padding-bottom: 57px;
+  padding-top: 45px;
+}
+
+.profile-pic-div img{
+  width: 200px;
+  border-radius: 100px;
 }
 
 
@@ -223,9 +252,10 @@ nav {
 
 /* User details CSS */
 .user-details{
+  background-color: whitesmoke;
   border-style: solid;
-  border-color: #b6b6b6;
-  border-width: 1px;
+  border-color: black;
+  border-width: 4px;
   border-radius: 15px;
   margin-left: 30px;
   flex: 1;
@@ -235,7 +265,7 @@ nav {
 
 .user-details-header{
   margin-left: 60px;
-  margin-right: 496px;
+  margin-right: 620px;
   margin-top: 40px;
   margin-bottom: 60px;
   font-size: 28px;
@@ -264,10 +294,10 @@ nav {
   border-style: solid;
   border-color: #0F4C75;
   font-size: 16px;
-  margin-left: 1298px;
+  margin-left: 1288px;
   cursor: pointer;
   width: 130px;
-  margin-top: 150px;
+  margin-top: 170px;
   position: absolute;
   z-index: 99;
 }
@@ -304,13 +334,13 @@ nav {
   display: flex;
   flex-direction: column;
   border-style: solid;
-  border-color:#b6b6b6;
-  border-width: 1px;
+  border-color: black;
+  border-width: 4px;
   border-radius: 15px;
   margin-left: 60px;
   margin-right: 60px;
   margin-bottom: 50px;
-  
+  background-color: whitesmoke;
 }
 
 .form-header{
@@ -368,7 +398,7 @@ nav {
 }
 
 .remove-btn-div{
-  margin-left: 1300px;
+  margin-left: 1260px;
   margin-bottom: 42px;
 }
 
@@ -390,6 +420,28 @@ nav {
 
 }
 
+.logout-btn-div{
+  position: absolute;
+  top: 1095px;
+  left: 78px;
+}
+
+.logout-btn{
+  padding: 8px 16px;
+  background-color: #0F4C75;
+  color: #fff;
+  border-radius: 20px;
+  border-style: solid;
+  border-color: #0F4C75;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.logout-btn:hover{
+  background-color: #fff;
+  color: #0F4C75;
+}
+
 
 
 /* Footer CSS */
@@ -402,10 +454,11 @@ html, body {
 body {
   display: flex;
   flex-direction: column;
+  background-image: url(../images/abstract-textured-backgound.jpg);
 }
 
 footer {
-  background-color: #f0f0f0;
+  background-image: linear-gradient(lightblue,white);
   width: 100%;
   padding: 20px;
   text-align: center;

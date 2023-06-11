@@ -5,7 +5,7 @@
     $email = $_POST["email"];
     $password = $_POST["password"];
 
-    $sql = "SELECT Password FROM user WHERE Email = '$email'";
+    $sql = "SELECT Username, Password, Profile_pic_location FROM user WHERE Email = '$email'";
     $result = $conn->query($sql);
 
     if($result->num_rows > 0){
@@ -14,9 +14,11 @@
       $storedPwd = $row["Password"];
 
       if($storedPwd === $password){
-        $_SESSION["email"] = $email;
+        $_SESSION["loggedUser"] = $email;
+        $_SESSION["username"] = $row["Username"];
+        $_SESSION["pic"] = $row["Profile_pic_location"];
         echo "<script>alert('Login succeessful');</script>";
-        
+        header("location: logged-index.php");
       }
       else{
         echo "<script>alert('Invalid Password');</script>";
@@ -37,10 +39,10 @@
 </head>
 <body>
   <div class="container">
-  <section class="header">
+
     <nav>
         <div class="logo">
-            <img src="images\W - Tech.png" alt="Company Logo">
+            <img src="../images/W - Tech.png" alt="Company Logo">
         </div>
         
             <div class="menu">
@@ -57,15 +59,15 @@
 
 
 
-</section>
+
     <div class="card">
       <h2>Login</h2>
       <form method="POST" action="<?php echo $_SERVER['PHP_SELF']; ?>">
         <input type="email" placeholder="Email" name="email" required>
         <input type="password" placeholder="Password" name="password" required>
         <label><input type="checkbox"> Remember me</label>
-        <input type="submit" name="submit" class="submit" value="Log In">Sign In</button>
-        <a href="forgot_password.html">Forgot Password?</a>
+        <input type="submit" name="submit" class="submit" value="Log In">
+        <a href="ForgotPass.php">Forgot Password?</a>
       </form>
       <?php if (isset($message)): ?>
         <p><?php echo $message; ?></p>

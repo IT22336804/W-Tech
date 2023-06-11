@@ -4,15 +4,15 @@
   padding: 0;
   box-sizing: border-box;
   margin-right: 0;
-  font-family: 'Times New Roman', Times, serif;
-  
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight:550;
 }
 
 /*First section*/
 .header{
   min-height: 100vh;
   width: 100%;
-  background-image: linear-gradient(#1B262C,#0F4C75),url(images\bg.jpg);
+  background-image: url(../images/bgg.png);
   position: relative;
   background-position: center;
   background-size: cover;
@@ -41,7 +41,7 @@ nav {
     display: flex;
     align-items: center;
     margin-right: 10px;
-  
+    margin-left: 110px;
   }
   .menu-item{
    margin-left: 50px;
@@ -77,6 +77,17 @@ nav {
   .signup-login {
     display: flex;
     align-items: center;
+  }
+
+  .signup-login img{
+    width: 48px;
+    border-radius: 24px;
+  }
+
+  .username{
+    text-decoration: none;
+    color: #fff;
+    margin-right: 20px;
   }
   
   .login-button, .signup-button {
@@ -121,10 +132,12 @@ nav {
   
   .welcome-text{
     
-    font-family: 'Times New Roman', Times, serif;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     font-size: 50px;
     letter-spacing: 2px;
     margin-top: 100px;
+    color: whitesmoke;
+    text-align: center;
   }
   
   .welcome img{
@@ -133,6 +146,7 @@ nav {
     width: 500px;
     height: 300px;
     margin-bottom: auto;
+    display: none;
   }
 
   .explore {
@@ -143,7 +157,7 @@ nav {
     background-color: #ffffff;
     padding: 12px 24px;
     display: flex;
-    width: 180px;
+    width: 152px;
     margin-top: 70px;
     border-radius: 4px;
     transition: background-color 0.3s ease;
@@ -151,7 +165,14 @@ nav {
     border-width: 2px;
     border-style: solid;
     letter-spacing: 0.15em;
+    margin-left: 639px;
+    
   }
+
+  .explore-text{
+    text-align: center;
+  }
+
   .explore:hover {
     color: black;
     cursor: pointer;
@@ -232,7 +253,7 @@ nav {
     position: relative;
     background-position: center;
     background-size: cover;
-    background-image: linear-gradient(#BBE1FA,#BBE1FA,#00d4ff), url(images/bg.jpg);
+    background-image: url("../images/bg2.png");
   }
 
   .description-section {
@@ -244,6 +265,7 @@ nav {
   
   .welcome-content2
   {
+    color: aliceblue;
     text-align: center;
     font-size: 3em; 
     padding-top: 20px; 
@@ -256,7 +278,7 @@ nav {
     height: 300px;
     margin-left: 50px;
     padding-bottom: 20px;
-    border-radius: 20px;
+    border-radius: 50px;
   }
   
   .description-text p {
@@ -265,10 +287,14 @@ nav {
     margin-left: 50px;
     font-family: Arial, sans-serif;
     font-size: 16px;
+    color: whitesmoke;
+    font-weight: bold;
     line-height: 1.5;
-    color: #333333;
     margin-bottom: 20px;
     text-align: justify;
+    /* background-color: whitesmoke;
+    padding: 25px;
+    border-radius: 40px; */
   }
  
   
@@ -281,7 +307,7 @@ nav {
     position: relative;
    
     background-size: cover;
-    background-image: linear-gradient(#BBE1FA,#BBE1FA,#00d4ff), url(images/bg.jpg);
+    background-image: url(../images/bg3.1.png);
     display: flex;
   justify-content: center;
   align-items: center;

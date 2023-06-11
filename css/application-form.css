@@ -1,3 +1,8 @@
+*{
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight:550;
+}
+
 /* Header CSS */
 nav {
   display: flex;
@@ -5,7 +10,7 @@ nav {
   justify-content: space-between;
   padding: 10px;
   width: 100%;
-  
+  background-image: linear-gradient(#1B262C,#0F4C75);
 }
 
 .logo {
@@ -28,7 +33,7 @@ nav {
  margin-left: 50px;
  margin-right: 10px;
  text-decoration: none;
- color: black;
+ color: #fff;
 }
 .menu-item a{
   position: relative;
@@ -56,6 +61,17 @@ nav {
 .signup-login {
   display: flex;
   align-items: center;
+}
+
+.signup-login img{
+  width: 48px;
+  border-radius: 24px;
+}
+
+.username{
+  text-decoration: none;
+  color: #fff;
+  margin-right: 20px;
 }
 
 .login-button, .signup-button {
@@ -101,11 +117,12 @@ nav {
 
 .contact-info-div{
     border-style: solid;
-    border-width: 1px;
-    border-color: #b6b6b6;
+    border-width: 4px;
+    border-color: black;
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
     margin-top: 20px;
+    background-color: whitesmoke;
 }
 
 .contact-info-div p{
@@ -138,8 +155,9 @@ nav {
 
 /* Resume and cover letter CSS */
 .document-upload-div{
-   border: #b6b6b6 solid 1px;
+   border: black solid 4px;
    border-top: none;
+   background-color: whitesmoke;
 }
 
 .resume-covlet-header{
@@ -188,10 +206,11 @@ nav {
 
 /* Form Submition CSS */
 .form-final-div{
-  border: #b6b6b6 solid 1px;
+  border: black solid 4px;
   border-top: none;
   border-bottom-left-radius: 15px;
   border-bottom-right-radius: 15px;
+  background-color: whitesmoke;
 }
 
 .comments-div{
@@ -260,10 +279,13 @@ html, body {
   body {
     display: flex;
     flex-direction: column;
+    background-color: #BBE1FA;
+    margin-top: 0px;
+    margin-left: 0px;
   }
   
   footer {
-    background-color: #f0f0f0;
+    background-image: linear-gradient(lightblue,white);
     padding: 20px;
     text-align: center;
     margin-top: auto;
