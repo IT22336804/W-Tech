@@ -61,69 +61,79 @@
 
         <table>
             <tr>
-                <th>JOB ID</th>
-                <th>Category</th>
-                <th>Job Title</th>
-                <th>Short Description</th>
-                <th>Salary</th>
-                <th>Full Description</th>
-                <th>Responsibilities</th>
-                <th>Requirements</th>
-                <th >Edit</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Mobile</th>
+                <th>Resume</th>
+                <th>Cover Letter</th>
+                <th>Comments</th>
+                <th>Status</th>
                 <th >Delete</th>
             </tr>
             <?php
-                include 'php\Jobs table.php'
+                include 'php\JobAppTable.php'
             ?>
         </table>
 
         <script>
-    function editJob(jobId) {
-        // Redirect to the edit page with the job ID as a parameter
-        window.location.href = "edit job.php?id=" + jobId;
-    }
+    function updateStatus(action, id) {
+        var status;
+        if (action === 'accept') {
+            status = 'Accepted';
+        } else if (action === 'reject') {
+            status = 'Rejected';
+        } else if (action === 'waitlist') {
+            status = 'Waitlisted';
+        } else if (action === 'delete') {
+            if (confirm('Are you sure you want to delete this application?')) {
+                var form = document.createElement('form');
+                form.method = 'post';
+                form.action = '<?php echo $_SERVER["PHP_SELF"]; ?>';
 
+                var inputId = document.createElement('input');
+                inputId.type = 'hidden';
+                inputId.name = 'Application_ID';
+                inputId.value = id;
 
+                var inputAction = document.createElement('input');
+                inputAction.type = 'hidden';
+                inputAction.name = 'action';
+                inputAction.value = action;
 
+                form.appendChild(inputId);
+                form.appendChild(inputAction);
+                document.body.appendChild(form);
 
-    function deleteJob(jobId) {
-        // Show the confirmation dialog
-        var confirmDelete = confirm("Are you sure you want to delete this job?");
+                form.submit();
+            }
+        } else {
+            return;
+        }
 
-        // If the user confirms the deletion
-        if (confirmDelete) {
-            // Create a new XMLHttpRequest object
-            var xhr = new XMLHttpRequest();
+        if (status) {
+            var form = document.createElement('form');
+            form.method = 'post';
+            form.action = '<?php echo $_SERVER["PHP_SELF"]; ?>';
 
-            // Set up the request
-            xhr.open("POST", "php/delete_job.php", true);
-            xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+            var inputId = document.createElement('input');
+            inputId.type = 'hidden';
+            inputId.name = 'Application_ID';
+            inputId.value = id;
 
-            // Set up the callback function
-            xhr.onreadystatechange = function() {
-                if (xhr.readyState === 4 && xhr.status === 200) {
-                    // Handle the response from the server
-                    if (xhr.responseText === "success") {
-                        // Delete successful
-                        alert("Job deleted successfully.");
-                        window.location.reload();
-                    } else {
-                        // Delete failed
-                        alert("Failed to delete the job.");
-                    }
-                } else if (xhr.readyState === 4 && xhr.status !== 200) {
-                    // Handle errors if any
-                    alert("Error: " + xhr.status);
-                }
-            };
+            var inputAction = document.createElement('input');
+            inputAction.type = 'hidden';
+            inputAction.name = 'action';
+            inputAction.value = action;
 
-            // Send the request with the job ID as data
-            xhr.send("id=" + jobId);
+            form.appendChild(inputId);
+            form.appendChild(inputAction);
+            document.body.appendChild(form);
+
+            form.submit();
         }
     }
 </script>
 
-    
 </body>
 
 
