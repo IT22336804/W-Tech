@@ -1,6 +1,8 @@
 function editProfile(){
 
     console.log("hi");
+    let editBtn = document.getElementById("edit");
+    editBtn.style.display = "none";
 
     let uname = document.getElementById("uname");
     let fname = document.getElementById("fname");
@@ -11,29 +13,18 @@ function editProfile(){
     let pic = document.getElementById("profile-pic");
     let submitBtn = document.getElementById("submit");
 
-    if(uname.style.display === "none"){
 
-        uname.style.display = "block";
-        fname.style.display = "block";
-        lname.style.display = "block";
-        email.style.display = "block";
-        mobile.style.display = "block";
-        bio.style.display = "block";
-        pic.style.display = "block";
-        submitBtn.style.display = "inline-block";
 
-    }
-    else{
+    uname.style.display = "block";
+    fname.style.display = "block";
+    lname.style.display = "block";
+    email.style.display = "block";
+    mobile.style.display = "block";
+    bio.style.display = "block";
+    pic.style.display = "block";
+    submitBtn.style.display = "inline-block";
 
-        uname.style.display = "none";
-        fname.style.display = "none";
-        lname.style.display = "none";
-        email.style.display = "none";
-        mobile.style.display = "none";
-        bio.style.display = "none";
-        pic.style.display = "none";
-        submitBtn.style.display = "none";
-    }
+    
     
 
     

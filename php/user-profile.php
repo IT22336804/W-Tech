@@ -2,7 +2,6 @@
     session_start();
     $user = $_SESSION["loggedUser"];
     
-    $uname = "Krash612";
 
     require 'configK.php';
 
@@ -63,7 +62,7 @@
 <body>
     <nav>
         <div class="logo">
-            <img src="images\W - Tech.png" alt="Company Logo">
+            <img src="../images/W - Tech.png" alt="Company Logo">
         </div>
                 
         <div class="menu">
@@ -78,7 +77,7 @@
         </div>
     </nav>
 
-    <button class="edit-profile-btn" onclick="editProfile()">Edit Profile</button>
+    <button class="edit-profile-btn" id="edit" onclick="editProfile()">Edit Profile</button>
 
     <form method="post" action="edit-profile.php" enctype="multipart/form-data">
         <div class="user-profile-div">

@@ -11,7 +11,7 @@ if(isset($_POST["submit"])){
   $usern = $_POST["Username"];
   $pass = $_POST["Password"];
 
-  $sql= "INSERT INTO user(First_Name, Last_Name, Date_of_Birth, Email, Bio, Username, Password) VALUES('$Fname', '$Lname', '$dob', '$email', '$bio;', '$usern', '$pass') " ;
+  $sql= "INSERT INTO user(First_Name, Last_Name, Date_of_Birth, Email, Mobile, Bio, Username, Password) VALUES('$Fname', '$Lname', '$dob', '$email', '$mobile', '$bio;', '$usern', '$pass') " ;
   if($conn->query($sql)){
     echo "<script>alert('User account successfully created');</script>";
   }
@@ -44,7 +44,7 @@ if(isset($_POST["submit"])){
 
 <nav>
             <div class="logo">
-                <img src="images\W - Tech.png" alt="Company Logo">
+                <img src="../images/W - Tech.png" alt="Company Logo">
             </div>
             
                 <div class="menu">
@@ -79,7 +79,7 @@ if(isset($_POST["submit"])){
       </div>
       <div class="column">
         <input type="submit" name="submit" class="submit" value="submit">
-        <p>Already have an account? <a href="login.html">Log in</a></p>
+        
       </div>
     </form>
   </div>

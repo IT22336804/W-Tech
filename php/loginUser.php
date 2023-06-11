@@ -39,10 +39,10 @@
 </head>
 <body>
   <div class="container">
-  <section class="header">
+
     <nav>
         <div class="logo">
-            <img src="images\W - Tech.png" alt="Company Logo">
+            <img src="../images/W - Tech.png" alt="Company Logo">
         </div>
         
             <div class="menu">
@@ -59,15 +59,15 @@
 
 
 
-</section>
+
     <div class="card">
       <h2>Login</h2>
       <form method="POST" action="<?php echo $_SERVER['PHP_SELF']; ?>">
         <input type="email" placeholder="Email" name="email" required>
         <input type="password" placeholder="Password" name="password" required>
         <label><input type="checkbox"> Remember me</label>
-        <input type="submit" name="submit" class="submit" value="Log In">Sign In</button>
-        <a href="forgot_password.html">Forgot Password?</a>
+        <input type="submit" name="submit" class="submit" value="Log In">
+        <a href="ForgotPass.php">Forgot Password?</a>
       </form>
       <?php if (isset($message)): ?>
         <p><?php echo $message; ?></p>

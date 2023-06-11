@@ -64,7 +64,7 @@ session_start();
 <body>
     <nav>
         <div class="logo">
-            <img src="images\W - Tech.png" alt="Company Logo">
+            <img src="../images/W - Tech.png" alt="Company Logo">
         </div>
                 
         <div class="menu">

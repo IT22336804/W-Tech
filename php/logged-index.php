@@ -45,7 +45,7 @@
     <div class="description-section">
         <img class="description-image" src="../images/Welcome.jpg" alt="Description Image">
         <div class="description-text">
-            <p>Welcome to W-tech, a leading technology company dedicated to delivering innovative solutions. With our team of skilled professionals and cutting-edge technologies, we provide a wide range of services tailored to meet your business needs. From web development and mobile applications to cloud computing and artificial intelligence, we specialize in delivering robust and scalable solutions. Our mission is to empower businesses with transformative technology, enabling them to thrive in today's digital landscape. Partner with W-tech and embark on a journey of digital excellence.</p>
+            <p>Welcome to W-tech, a premier technology company dedicated to delivering cutting-edge solutions. With our team of skilled professionals and state-of-the-art technologies, we provide a comprehensive range of services tailored to meet the unique needs of businesses. From web and mobile app development to cloud computing, cybersecurity, and artificial intelligence, we specialize in delivering innovative and scalable solutions. Our mission is to empower businesses to embrace digital transformation and leverage technology to drive growth and success. Partner with W-tech and unlock the full potential of your business in today's dynamic and competitive landscape.</p>
         </div>
     </div>
 </section>
@@ -57,8 +57,10 @@
             <div class="carousel__box">
               <div class="carousel__image"><img src="../images/front end.jpg"/></div>
               <div class="carousel__contents">
-                <h2 class="user__name">User Name</h2>
-                <h3 class="user__title">User Title</h3>
+                <a href="logged-Find-jobs.php">
+                <h2 class="user__name">Full Stack Developer</h2>
+                <h3 class="user__title">$75,000 to $130,000 per year</h3>
+                </a>
               </div>
             </div>
           </li>
@@ -66,8 +68,10 @@
             <div class="carousel__box">
               <div class="carousel__image"><img src="../images/back end.jpg"/></div>
               <div class="carousel__contents">
-                <h2 class="user__name">User Name</h2>
-                <h3 class="user__title">User Title</h3>
+                <a href="logged-Find-jobs.php">
+                <h2 class="user__name">Mobile App Developer</h2>
+                <h3 class="user__title">$70,000 to $120,000 per year</h3>
+                </a>
               </div>
             </div>
           </li>
@@ -75,8 +79,10 @@
             <div class="carousel__box">
               <div class="carousel__image"><img src="../images/pic2.jpg"/></div>
               <div class="carousel__contents">
-                <h2 class="user__name">User Name</h2>
-                <h3 class="user__title">User Title</h3>
+                <a href="logged-Find-jobs.php">
+                <h2 class="user__name">Mobile App Developer</h2>
+                <h3 class="user__title">$70,000 to $120,000 per year</h3>
+                </a>
               </div>
             </div>
           </li>

@@ -1,3 +1,8 @@
+*{
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight:550;
+  }
+
 body{
     margin: 0;
     padding: 0;
@@ -227,8 +232,7 @@ table {
     background-color: #f2f2f2;
   }
 
-  .edit-button,
-  .delete-button {
+  .table-btn{
     background-color: #3498db;
     color: white;
     border: none;
@@ -239,10 +243,10 @@ table {
     transition: background-color 0.3s ease;
   }
 
-  .edit-button:hover,
-  .delete-button:hover {
+  .table-btn{
     background-color: #2980b9;
   }
+
 
   a 
   {

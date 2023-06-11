@@ -10,7 +10,7 @@
    
 </head>
 <body>
-    <div class="container">
+  <div class="container">
     <header>
         <nav>
             <div class="logo">
@@ -35,7 +35,7 @@
         <input type="text" placeholder="Search for jobs" class="type">
         <button type="submit"><img src="images\Search.png" alt=""></button>
     </form>
-<div class="drop-dwn">
+  <div class="drop-dwn">
     <div class="categories" id="categories">
   <span class="cat">Categories</span>
   <span class="arrw-dwn1" id="button1"><img src="images\chevron.png" alt=""></span>
