@@ -80,7 +80,7 @@ session_start();
     </nav>
 
     <div class="application-div">
-        <p>Apply to <span>Job title</span></p>
+        <p>Apply to <span></span></p>
         <form method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>" enctype="multipart/form-data">
             <div class="contact-info-div">
                 <p>Contact Info</p>

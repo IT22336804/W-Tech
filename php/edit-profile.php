@@ -34,6 +34,8 @@
 
             echo "<script>alert('Details successfully updated')</script>";
             $_SESSION["loggedUser"] = $email;
+            $_SESSION["username"] = $uname;
+            $_SESSION["pic"] = $pic_target_file;
             header("location: user-profile.php");
         }
         else{

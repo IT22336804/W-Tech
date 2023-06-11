@@ -1,4 +1,5 @@
 <?php
+    
     session_start();
 
 ?>
@@ -132,7 +133,7 @@
         ?>
     </div>
     <?php 
-    include 'Job posting.php'
+    include 'logged-job-posting.php'
     ?>
   </div>
 </div>
