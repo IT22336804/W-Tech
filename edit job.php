@@ -31,16 +31,16 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $stmt->bind_param("sssssssi", $category, $jobTitle, $shortDescription, $salaryAmount, $fullDescription, $responsibilities, $requirements, $jobId);
 
     if ($stmt->execute()) {
-        // Redirect back to the job management page with a success message
+        
         header("Location: Manage Jobs.php?message=success");
         exit();
     } else {
-        // Redirect back to the job management page with an error message
+        
         header("Location: Manage Jobs.php?message=error");
         exit();
     }
 } else {
-    // Get the job ID from the URL parameter
+    
     $jobId = $_GET["id"];
 
     // Retrieve the job details from the database
