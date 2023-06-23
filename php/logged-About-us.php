@@ -57,7 +57,7 @@ session_start();
         
         <div class="award-img">
             <img src="../images/award1.avif" alt="">
-            <img src="../images/award2.avif" alt="">
+            <img src="../images/BIB-PR-Image-min.jpg" alt="">
         </div>
     </div>
     </div>

@@ -11,13 +11,25 @@ if(isset($_POST["submit"])){
   $usern = $_POST["Username"];
   $pass = $_POST["Password"];
 
-  $sql= "INSERT INTO user(First_Name, Last_Name, Date_of_Birth, Email, Mobile, Bio, Username, Password) VALUES('$Fname', '$Lname', '$dob', '$email', '$mobile', '$bio;', '$usern', '$pass') " ;
-  if($conn->query($sql)){
-    echo "<script>alert('User account successfully created');</script>";
-  }
+  $sql2 = "SELECT * FROM user WHERE Email = '$email'";
+  $result = $conn->query($sql2);
 
+  if($result->num_rows === 0){
+
+    $sql= "INSERT INTO user(First_Name, Last_Name, Date_of_Birth, Email, Mobile, Bio, Username, Password) VALUES('$Fname', '$Lname', '$dob', '$email', '$mobile', '$bio;', '$usern', '$pass') " ;
+    if($conn->query($sql)){
+
+      echo "<script>alert('User account successfully created');</script>";
+
+    }
+
+    else{
+      echo "Error: ". $conn->error;
+    }
+  }
   else{
-    echo "Error: ". $conn->error;
+    echo "<script>alert('This Email already has an account');</script>";
+    
   }
 
 
@@ -35,6 +47,7 @@ if(isset($_POST["submit"])){
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="../css/styles.css">
+  <script src="../js/Sign-Up.js"></script>
   <title>Document</title>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -62,7 +75,7 @@ if(isset($_POST["submit"])){
 <div class="container">
   <div class="card">
     <h2>Sign Up</h2>
-    <form method="POST" action="<?php echo $_SERVER['PHP_SELF']; ?>">
+    <form method="POST" action="<?php echo $_SERVER['PHP_SELF']; ?>" onsubmit="return confirmPassword()">
 
       <div class="column">
         <input type="text" placeholder="First Name" name="First_Name" required>
@@ -74,11 +87,11 @@ if(isset($_POST["submit"])){
       </div>
       <div class="column">
         <input type="text" placeholder="Username" name="Username" required>
-        <input type="password" placeholder="Password" name="Password" required>
-        <input type="password" placeholder="Confirm Password" name="Confirm_Password" required>
+        <input type="password" placeholder="Password" name="Password" id="pwd" required>
+        <input type="password" placeholder="Confirm Password" name="Confirm_Password" id="confirmPwd" required>
       </div>
       <div class="column">
-        <input type="submit" name="submit" class="submit" value="submit">
+        <input type="submit" name="submit" class="submit" value="Sign Up">
         
       </div>
     </form>
@@ -117,7 +130,7 @@ if(isset($_POST["submit"])){
  
 </html>
 
-  <script src="js/Rivin.js"></script>
+  
 </body>
 
 </html>
