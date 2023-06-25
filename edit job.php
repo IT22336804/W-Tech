@@ -14,10 +14,8 @@ if ($conn->connect_error) {
 
 // Check if the form was submitted
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
-    // Get the job ID from the URL parameter or form data
     $jobId = $_GET["id"] ?? $_POST["id"];
 
-    // Get the updated job details from the form inputs
     $category = $_POST["category"];
     $jobTitle = $_POST["job_title"];
     $shortDescription = $_POST["short_description"];
@@ -26,34 +24,24 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $responsibilities = $_POST["responsibilities"];
     $requirements = $_POST["requirements"];
 
-    // Prepare and execute the update query
-    $stmt = $conn->prepare("UPDATE jobs SET category=?, job_title=?, short_description=?, salary_amount=?, full_description=?, responsibilities=?, requirements=? WHERE id=?");
-    $stmt->bind_param("sssssssi", $category, $jobTitle, $shortDescription, $salaryAmount, $fullDescription, $responsibilities, $requirements, $jobId);
+    $sql = "UPDATE jobs SET category='$category', job_title='$jobTitle', short_description='$shortDescription', salary_amount='$salaryAmount', full_description='$fullDescription', responsibilities='$responsibilities', requirements='$requirements' WHERE id=$jobId";
 
-    if ($stmt->execute()) {
-        // Redirect back to the job management page with a success message
+    if ($conn->query($sql) === true) {
         header("Location: Manage Jobs.php?message=success");
         exit();
     } else {
-        // Redirect back to the job management page with an error message
         header("Location: Manage Jobs.php?message=error");
         exit();
     }
 } else {
-    // Get the job ID from the URL parameter
     $jobId = $_GET["id"];
 
-    // Retrieve the job details from the database
-    $stmt = $conn->prepare("SELECT id, category, job_title, short_description, salary_amount, full_description, responsibilities, requirements FROM jobs WHERE id=?");
-    $stmt->bind_param("i", $jobId);
-    $stmt->execute();
-    $result = $stmt->get_result();
+    $sql = "SELECT id, category, job_title, short_description, salary_amount, full_description, responsibilities, requirements FROM jobs WHERE id=$jobId";
+    $result = $conn->query($sql);
 
-    // Check if the job exists
     if ($result->num_rows > 0) {
         $job = $result->fetch_assoc();
     } else {
-        // Redirect back to the job management page if the job doesn't exist
         header("Location: Manage Jobs.php?message=notfound");
         exit();
     }

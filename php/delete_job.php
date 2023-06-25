@@ -17,17 +17,14 @@ if (isset($_POST["id"])) {
     // Get the job ID
     $jobId = $_POST["id"];
 
-    // Prepare and execute the delete query
-    $stmt = $conn->prepare("DELETE FROM jobs WHERE id=?");
-    $stmt->bind_param("i", $jobId);
+    $sql = "DELETE FROM jobs WHERE id = $jobId";
 
-    if ($stmt->execute()) {
-        // Delete successful
-        echo "success";
-    } else {
-        // Delete failed
-        echo "error";
-    }
+if ($conn->query($sql)) {
+    echo "success";
+} else {
+    echo "error: " . $conn->error;
+}
+
 }
 
 $conn->close();

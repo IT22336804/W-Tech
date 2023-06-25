@@ -79,12 +79,12 @@ document.addEventListener('DOMContentLoaded', function() {
       var boxId = this.id;
       var boxNumber = boxId.substring(3); // Assuming the ID format is "boxX" where X is the box number
       
-      // Hide all job descriptions
+      // Hide job descriptions
       for (var j = 0; j < jobDescriptions.length; j++) {
         jobDescriptions[j].style.display = 'none';
       }
       
-      // Display the clicked job description
+      // Display clicked job description
       var jobDescription = document.getElementById('job-description' + boxNumber);
       jobDescription.style.display = 'block';
     });
