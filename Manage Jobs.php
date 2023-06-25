@@ -79,48 +79,36 @@
 
         <script>
     function editJob(jobId) {
-        // Redirect to the edit page with the job ID as a parameter
+        
         window.location.href = "edit job.php?id=" + jobId;
     }
 
 
-
-
     function deleteJob(jobId) {
-        // Show the confirmation dialog
-        var confirmDelete = confirm("Are you sure you want to delete this job?");
+    var confirmDelete = confirm("Are you sure you want to delete this job?");
 
-        // If the user confirms the deletion
-        if (confirmDelete) {
-            // Create a new XMLHttpRequest object
-            var xhr = new XMLHttpRequest();
+    // If confirm delete
+    if (confirmDelete) {
+        var form = document.createElement("form");
+        form.method = "POST";
+        form.action = "php/delete_job.php";
 
-            // Set up the request
-            xhr.open("POST", "php/delete_job.php", true);
-            xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+        var input = document.createElement("input");
+        input.type = "hidden";
+        input.name = "id";
+        input.value = jobId;
 
-            // Set up the callback function
-            xhr.onreadystatechange = function() {
-                if (xhr.readyState === 4 && xhr.status === 200) {
-                    // Handle the response from the server
-                    if (xhr.responseText === "success") {
-                        // Delete successful
-                        alert("Job deleted successfully.");
-                        window.location.reload();
-                    } else {
-                        // Delete failed
-                        alert("Failed to delete the job.");
-                    }
-                } else if (xhr.readyState === 4 && xhr.status !== 200) {
-                    // Handle errors if any
-                    alert("Error: " + xhr.status);
-                }
-            };
+        form.appendChild(input);
+        document.body.appendChild(form);
+        form.addEventListener("submit", function() {
+            
+            window.location.href = "Manage Jobs.php";
+        });
 
-            // Send the request with the job ID as data
-            xhr.send("id=" + jobId);
-        }
+        form.submit();
     }
+}
+
 </script>
 
     

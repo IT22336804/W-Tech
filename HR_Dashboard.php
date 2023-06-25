@@ -100,7 +100,7 @@ $conn->close();
                             <p class="text-primary">TOTAL USERS</p>
                             <img class="card-icons text-orange" src="images/person_2_FILL0_wght400_GRAD0_opsz48.png" alt="users">
                         </div>
-                        <span class="text-primary font-weight-bold">85</span>
+                        <span class="text-primary font-weight-bold">3</span>
                     </div>
 
                     <div class="card">
@@ -108,7 +108,7 @@ $conn->close();
                             <p class="text-primary">SUCCESSFUL HIRINGS</p>
                             <img class="card-icons text-green" src="images/done_all_FILL0_wght400_GRAD0_opsz48.png" alt="hired">
                         </div>
-                        <span class="text-primary font-weight-bold">164</span>
+                        <span class="text-primary font-weight-bold">1</span>
                     </div>
                 </div>
         </main>

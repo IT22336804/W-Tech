@@ -8,12 +8,12 @@ $dbname = "recruitment company system";
 
 $conn = new mysqli($servername, $username, $password, $dbname);
 
-// Check if the connection was successful
+
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
-// Retrieve job data from the database
+
 $sql = "SELECT id,job_title, salary_amount, short_description,category,full_description,responsibilities,requirements FROM jobs";
 $result = $conn->query($sql);
 if ($result->num_rows > 0) {

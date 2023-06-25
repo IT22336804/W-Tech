@@ -1,46 +1,46 @@
-// Get references to the buttons and lists
+
 var button1 = document.getElementById("button1");
 var button2 = document.getElementById("button2");
 var listItems1 = document.querySelector(".list-items1");
 var listItems2 = document.querySelector(".list-items2");
 var slider = document.getElementById("slider");
-// Add click event listeners to the buttons
+
 button1.addEventListener("click", function() {
-  // Toggle the visibility of list-items1
+  
   listItems1.style.display = listItems1.style.display === "none" ? "block" : "none";
   slider.style.marginTop = listItems1.style.display === "none" ? "" : "300px";
   
 });
 
 button2.addEventListener("click", function() {
-  // Toggle the visibility of list-items2
+  
   listItems2.style.display = listItems2.style.display === "none" ? "block" : "none";
   slider.style.marginTop = listItems2.style.display === "none" ? "" : "150px";
 });
 
 
-// Wait for the DOM to load
+
 document.addEventListener('DOMContentLoaded', function() {
-    // Get all the slides
+    
     var slides = document.querySelectorAll('.slide');
   
-    // Hide all slides except the first one
+    //hide the slides
     for (var i = 1; i < slides.length; i++) {
       slides[i].style.display = 'none';
     }
   
-    // Get all the swiper buttons
+    // get the swiper buttons
     var swiperButtons = document.querySelectorAll('.swiper-button');
   
-    // Add click event listener to each swiper button
+    
     swiperButtons.forEach(function(button, index) {
       button.addEventListener('click', function() {
-        // Hide all slides
+        
         for (var i = 0; i < slides.length; i++) {
           slides[i].style.display = 'none';
         }
   
-        // Show the selected slide
+        
         slides[index].style.display = 'block';
       });
     });
