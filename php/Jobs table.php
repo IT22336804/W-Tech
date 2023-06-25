@@ -1,6 +1,6 @@
 <?php
 
-// Create a connection to the database
+
 $servername = "localhost";
 $username = "root";
 $password = "";
