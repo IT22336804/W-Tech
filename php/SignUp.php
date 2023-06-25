@@ -75,7 +75,7 @@ if(isset($_POST["submit"])){
             <input type="text" placeholder="First Name" name="First_Name" required>
             <input type="text" placeholder="Last Name" name="Last_Name" required>
             <input type="email" placeholder="Email" name="Email" required>
-            <input type="text" placeholder="Mobile" name="Mobile" required>
+            <input type="text" placeholder="Mobile"  pattern="[0]{1}[0-9]{9}" name="Mobile" required>
             <input type="date" placeholder="Date of Birth" name="Date_of_Birth" required>
             <textarea placeholder="Bio" rows="4" name="bio"></textarea>
           </div>

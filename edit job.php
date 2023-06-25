@@ -1,5 +1,5 @@
 <?php
-// Create a connection to the database
+
 $servername = "localhost";
 $username = "root";
 $password = "";
@@ -7,12 +7,12 @@ $dbname = "recruitment company system";
 
 $conn = new mysqli($servername, $username, $password, $dbname);
 
-// Check if the connection was successful
+
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
-// Check if the form was submitted
+
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $jobId = $_GET["id"] ?? $_POST["id"];
 

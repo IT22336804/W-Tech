@@ -8,19 +8,16 @@ if(isset($_POST["submit"])){
   $result = $conn->query($sql);
 
   if($result->num_rows > 0){
-    // Email exists in the database
-    // Send the password reset link to the user's email
+  
 
-    // Placeholder code to send the email
-    // Replace this with your actual code to send the email
-    $resetLink = "https://example.com/reset-password"; // Example reset link
+    $resetLink = "https://example.com/reset-password"; 
     $message = "Reset your password by clicking the link: $resetLink";
     mail($email, "Password Reset", $message);
 
     echo "<script>alert('Password reset link has been sent to your email');</script>";
   }
   else{
-    // Email does not exist in the database
+   
     echo "<script>alert('Invalid Email');</script>";
   }
 }
